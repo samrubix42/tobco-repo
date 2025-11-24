@@ -10,15 +10,35 @@
         padding-left: 22px !important;
         line-height: 1.8;
     }
+
     ul.custom-white-bullets li::marker {
         color: white !important;
     }
+
     /* Image container helpers to keep layout tidy */
-    .about-card { overflow: hidden; background: #000; }
-    .about-top { height: 380px; }
-    .about-mid { height: 280px; }
-    .about-bottom { height: 280px; }
-    .about-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .about-card {
+        overflow: hidden;
+        background: #000;
+    }
+
+    .about-top {
+        height: 380px;
+    }
+
+    .about-mid {
+        height: 180px;
+    }
+
+    .about-bottom {
+        height: 180px;
+    }
+
+    .about-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
 </style>
 
 <div class="page-content">
@@ -104,136 +124,135 @@
 
         <!-- Middle Image Cards -->
         <div class="row g-4 mb-4">
-            <div class="col-12 col-md-4">
-                <div class="card border-0 shadow-sm rounded-3 h-40 about-card about-mid">
-                    <img src="{{ asset('public/frontend/assets/images/about/middle/premium-hookah.jpg') }}"
-                        alt="premium-hookah.jpg" style="object-fit:contain; background-color:#171717;">
-                </div>
-            </div>
 
-            <div class="col-12 col-md-4">
-                <div class="card border-0 shadow-sm rounded-3 h-40 about-card about-mid">
+
+            <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
+                <div class="border-0 d-flex gap-4 flex-column flex-md-row shadow-sm rounded-3 about-card about-mid h-100"
+                    style="background-color: #171717; padding: 10px;">
+
                     <img src="{{ asset('public/frontend/assets/images/about/middle/hookah-shop-noida.jpg') }}"
-                        alt="hookah-shop-noida.jpg" style="object-fit:contain; background-color:#171717;">
-                </div>
-            </div>
+                        alt="hookah-shop-noida.jpg"
+                        style="background-color: #171717; height:320px; object-fit: cover; border-radius: 10px;">
 
-            <div class="col-12 col-md-4">
-                <div class="card border-0 shadow-sm rounded-3 h-40 about-card about-mid">
+                    <img src="{{ asset('public/frontend/assets/images/about/middle/premium-hookah.jpg') }}"
+                        alt="premium-hookah.jpg"
+                        style="background-color: #171717; height:320px; object-fit: cover; border-radius: 10px;">
+
                     <img src="{{ asset('public/frontend/assets/images/about/middle/tobac-go-noida.jpg') }}"
-                        alt="tobac-go-noida.jpg" style="object-fit:contain; background-color:#171717;">
+                        alt="tobac-go-noida.jpg"
+                        style="background-color: #171717; height:320px; object-fit: cover; border-radius: 10px;">
                 </div>
             </div>
+
+
+
+
+            <!-- Flavours -->
+            <section class="mb-4 mt-4">
+                <h2 class="h2 mb-3" style="color:white;">Flavours That Lift Your Mood</h2>
+
+                <p class="text-white">
+                    At Tobac-Go, we know how important flavours are. A good flavour can change your whole experience. That’s why we keep many choices for you.
+                </p>
+
+                <p class="text-white">
+                    You will find sweet flavours, cool flavours, minty ones, fruit types, and mixed blends. We store only fresh and original flavours so you get smooth smoke and pure taste. If you are unsure what to buy, we guide you with simple suggestions based on your likes.
+                </p>
+            </section>
+
+            <!-- Accessories -->
+            <section class="mb-4">
+                <h2 class="h2 mb-3" style="color:white;">All Hookah Accessories Under One Roof</h2>
+
+                <p class="text-white">
+                    You do not need to visit different shops. Tobac-Go keeps all needed accessories in one place.
+                </p>
+
+                <p class="text-white mb-2">We offer:</p>
+
+                <ul class="custom-white-bullets">
+                    <li>Pipes</li>
+                    <li>Bowls</li>
+                    <li>Charcoal</li>
+                    <li>Heat management devices</li>
+                    <li>Foils</li>
+                    <li>Mouth tips</li>
+                    <li>Cleaning tools</li>
+                    <li>Lighters</li>
+                    <li>Ash trays and more...</li>
+                </ul>
+
+                <p class="text-white mt-3">
+                    With the right accessories, your hookah performs better and lasts longer. We help you choose the right items based on your current setup.
+                </p>
+            </section>
+
+            <!-- Shopping Experience -->
+            <section class="mb-4">
+                <h2 class="h2 mb-3" style="color:white;">A Friendly and Easy Shopping Experience</h2>
+
+                <p class="text-white">
+                    We believe the best shop is the one where you feel heard. That is why we talk to you, ask you about your needs, and guide you step by step.
+                </p>
+
+                <p class="text-white">
+                    Whether you visit us offline in Noida or shop online, we try to make your experience smooth. Your time matters, and we respect that.
+                </p>
+            </section>
+
+            <div class="d-flex justify-content-center align-items-center mt-4">
+                <div class="border-0 d-flex flex-column flex-md-row gap-4 shadow-sm rounded-3 about-card about-bottom h-100"
+                    style="background-color: #171717; padding: 10px;">
+
+                    <img src="{{ asset('public/frontend/assets/images/about/bottom/hookah-store.jpg') }}"
+                        alt="hookah-store.jpg"
+                        style="height:320px; width:100%; object-fit: cover; background-color:#171717; border-radius: 10px;">
+
+                    <img src="{{ asset('public/frontend/assets/images/about/bottom/luxury-hookah-design.jpg') }}"
+                        alt="luxury-hookah-design.jpg"
+                        style="height:320px; width:100%; object-fit: cover; background-color:#171717; border-radius: 10px;">
+
+                    <img src="{{ asset('public/frontend/assets/images/about/bottom/premium-hookah-design.jpg') }}"
+                        alt="premium-hookah-design.jpg"
+                        style="height:320px; width:100%; object-fit: cover; background-color:#171717; border-radius: 10px;">
+                </div>
+            </div>
+
+
+            <!-- Visit Today -->
+            <section class="mb-4">
+                <h2 class="h2 mb-3" style="color:white;">Visit Tobac-Go Today</h2>
+
+                <p class="text-white">
+                    If you are looking for the Best Hookah Shop in Noida, we are here for you.
+                </p>
+
+                <p class="text-white">
+                    We invite you to visit our store and see the quality yourself. If you want help, just ask — we listen, we guide, and we offer what suits you best.
+                </p>
+
+                <p class="text-white">
+                    Your perfect hookah journey starts right here.
+                </p>
+            </section>
+
+            <!-- Address -->
+            <section class="mb-5 bg-light p-4 rounded">
+                <p class="mb-1"><strong>Tobac-Go</strong></p>
+                <p class="mb-1">
+                    Shop no 38,39, Lower Ground Floor, Street 76, Market, Amarpali Silicon City, Sector 76, Noida, Uttar Pradesh 201316
+                </p>
+                <p>Phone: <a href="tel:078384 49604">078384 49604</a></p>
+
+                <div class="ratio ratio-16x9 mt-3">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.0497827883187!2d77.38032527549848!3d28.56826777569995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cef9220724b87%3A0x21576299f7843f22!2sTobac-go!5e0!3m2!1sen!2sin!4v1763726221613!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </section>
+
         </div>
-
-        <!-- Flavours -->
-        <section class="mb-4 mt-4">
-            <h2 class="h2 mb-3" style="color:white;">Flavours That Lift Your Mood</h2>
-
-            <p class="text-white">
-                At Tobac-Go, we know how important flavours are. A good flavour can change your whole experience. That’s why we keep many choices for you.
-            </p>
-
-            <p class="text-white">
-                You will find sweet flavours, cool flavours, minty ones, fruit types, and mixed blends. We store only fresh and original flavours so you get smooth smoke and pure taste. If you are unsure what to buy, we guide you with simple suggestions based on your likes.
-            </p>
-        </section>
-
-        <!-- Accessories -->
-        <section class="mb-4">
-            <h2 class="h2 mb-3" style="color:white;">All Hookah Accessories Under One Roof</h2>
-
-            <p class="text-white">
-                You do not need to visit different shops. Tobac-Go keeps all needed accessories in one place.
-            </p>
-
-            <p class="text-white mb-2">We offer:</p>
-
-            <ul class="custom-white-bullets">
-                <li>Pipes</li>
-                <li>Bowls</li>
-                <li>Charcoal</li>
-                <li>Heat management devices</li>
-                <li>Foils</li>
-                <li>Mouth tips</li>
-                <li>Cleaning tools</li>
-                <li>Lighters</li>
-                <li>Ash trays and more...</li>
-            </ul>
-
-            <p class="text-white mt-3">
-                With the right accessories, your hookah performs better and lasts longer. We help you choose the right items based on your current setup.
-            </p>
-        </section>
-
-        <!-- Shopping Experience -->
-        <section class="mb-4">
-            <h2 class="h2 mb-3" style="color:white;">A Friendly and Easy Shopping Experience</h2>
-
-            <p class="text-white">
-                We believe the best shop is the one where you feel heard. That is why we talk to you, ask you about your needs, and guide you step by step.
-            </p>
-
-            <p class="text-white">
-                Whether you visit us offline in Noida or shop online, we try to make your experience smooth. Your time matters, and we respect that.
-            </p>
-        </section>
-
-        <!-- Bottom Image Cards -->
-        <div class="row g-4 mb-4">
-                <div class="col-12 col-md-4">
-                <div class="card border-0 shadow-sm rounded-3 h-40 about-card about-bottom">
-                    <img src="{{ asset('public/frontend/assets/images/about/bottom/hookah-store.jpg') }}" alt="hookah-store.jpg" style="object-fit:contain; background:#171717;">
-                </div>
-            </div>
-
-            <div class="col-12 col-md-4">
-                <div class="card border-0 shadow-sm rounded-3 h-40 about-card about-bottom">
-                    <img src="{{ asset('public/frontend/assets/images/about/bottom/luxury-hookah-design.jpg') }}" alt="luxury-hookah-design.jpg" style="object-fit:contain; background:#171717;">
-                </div>
-            </div>
-
-            <div class="col-12 col-md-4">
-                <div class="card border-0 shadow-sm rounded-3 h-40 about-card about-bottom">
-                    <img src="{{ asset('public/frontend/assets/images/about/bottom/premium-hookah-design.jpg') }}" alt="premium-hookah-design.jpg" style="object-fit:contain; background:#171717;">
-                </div>
-            </div>
-        </div>
-
-        <!-- Visit Today -->
-        <section class="mb-4">
-            <h2 class="h2 mb-3" style="color:white;">Visit Tobac-Go Today</h2>
-
-            <p class="text-white">
-                If you are looking for the Best Hookah Shop in Noida, we are here for you.
-            </p>
-
-            <p class="text-white">
-                We invite you to visit our store and see the quality yourself. If you want help, just ask — we listen, we guide, and we offer what suits you best.
-            </p>
-
-            <p class="text-white">
-                Your perfect hookah journey starts right here.
-            </p>
-        </section>
-
-        <!-- Address -->
-        <section class="mb-5 bg-light p-4 rounded">
-            <p class="mb-1"><strong>Tobac-Go</strong></p>
-            <p class="mb-1">
-                Shop no 38,39, Lower Ground Floor, Street 76, Market, Amarpali Silicon City, Sector 76, Noida, Uttar Pradesh 201316
-            </p>
-            <p>Phone: <a href="tel:078384 49604">078384 49604</a></p>
-
-            <div class="ratio ratio-16x9 mt-3">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.0497827883187!2d77.38032527549848!3d28.56826777569995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cef9220724b87%3A0x21576299f7843f22!2sTobac-go!5e0!3m2!1sen!2sin!4v1763726221613!5m2!1sen!2sin"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
-                </iframe>
-            </div>
-        </section>
-
     </div>
-</div>
 
-@endsection
+    @endsection
