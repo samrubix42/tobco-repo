@@ -19,7 +19,7 @@ class APIController extends Controller
                 $data[] = array(
                     'title' => $c->title,
                     'slug'  => $c->slug,
-                    'image' => url('uploads/'.$c->image),
+                    'image' => url('public/uploads/'.$c->image),
                 );
             }
             $result = array(
@@ -48,7 +48,7 @@ class APIController extends Controller
             {
                 $data[] = array(
                     'title' => $s->title,
-                    'image' => url('uploads/'.$s->banner_image),
+                    'image' => url('public/uploads/'.$s->banner_image),
                 );
             }
             $result = array(
@@ -77,7 +77,7 @@ class APIController extends Controller
             {
                 $data[] = array(
                     'title'             => $p->title,
-                    'image'             => url('uploads/'.$p->image),
+                    'image'             => url('public/uploads/'.$p->image),
                     'slug'              => $p->slug,
                     'category'          => CategoryModel::select('title')->where('id', $p->category)->get()->first(),
                     'price'             => $p->reg_price,
@@ -120,7 +120,7 @@ class APIController extends Controller
         $info  = ContactSettingsModel::select('address', 'email','phone', 'logo', 'hours')->orderBy('id', 'desc')->get()->first();
         if($info)
         {
-            $logo = url('uploads/'.$info->logo);
+            $logo = url('public/uploads/'.$info->logo);
             $info['logo'] = $logo;
 
             $result = array(

@@ -61,7 +61,7 @@
                            <td>{{$s->title}}</td>
                            <td>{{$s->slug}}</td>
                            <td>Meta Title : {{$s->meta_title}}<br>Meta Keyword : {{$s->meta_keyword}}<br>Meta Description : {{$s->meta_description}}</td>
-                           <td><img src="{{url('uploads/thumbnail/'.$s->image)}}" class="img-thumbnail"/></td>
+                           <td><img src="{{url('public/uploads/thumbnail/'.$s->image)}}" class="img-thumbnail"/></td>
                            <td>{{date('d F, Y', strtotime($s->created_at))}}</td>
                            <td><a href="{{url('admin/add-blogs/'.$s->id)}}" class="btn btn-primary  py-8 mb-4 rounded-2"><i class="fa fa-edit"></i></a>
                            <a href="{{url('admin/delete/'.base64_encode($s->id).'/'.base64_encode('blogs'))}}" class="btn btn-danger delete  py-8 mb-4 rounded-2"><i class="fa fa-trash"></i></a>

@@ -122,7 +122,7 @@
                         <tr>
                            <td>{{$t->title}}</td>
                            <td>{{$t->designation}}</td>
-                           <td><img src="{{url('uploads/thumbnail/'.$t->image)}}" style="width:100px" class="img-thumbnail"/></td>
+                           <td><img src="{{url('public/uploads/thumbnail/'.$t->image)}}" style="width:100px" class="img-thumbnail"/></td>
                            <td>{{date('d F, Y', strtotime($t->created_at))}}</td>
                            <td><button class="btn btn-primary  py-8 mb-4 rounded-2" data-bs-toggle="modal" data-bs-target="#bs-example-modal-lg{{$t->id}}"><i class="fa fa-edit"></i></button>
                            <a href="{{url('admin/delete/'.base64_encode($t->id).'/'.base64_encode('testimonials'))}}" class="btn btn-danger delete  py-8 mb-4 rounded-2"><i class="fa fa-trash"></i></a>
@@ -175,7 +175,7 @@
                                                    <div class="col-md-12 mb-3">
                                                       <label for="subheading">Upload User Image</label><br>
                                                       @if($t->image)
-                                                      <img src="{{url('uploads/thumbnail/'.$t->image)}}" class="img-thumbnail"/>
+                                                      <img src="{{url('public/uploads/thumbnail/'.$t->image)}}" class="img-thumbnail"/>
                                                       @endif
                                                          <input type="file" class="form-control" id="image"
                                                             placeholder="Image" name="image" />

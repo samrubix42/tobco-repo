@@ -20,7 +20,7 @@
                         <h1 class="font-weight-bold text-color-dark text-10">{{$page->title}}</h1>
                      </div>
                      <div class="post-image pb-4">
-                        <img class="card-img-top custom-border-radius-1" src="{{url('uploads/'.$page->image)}}" alt="Card Image">
+                        <img class="card-img-top custom-border-radius-1" src="{{url('public/uploads/'.$page->image)}}" alt="Card Image">
                      </div>
                      <div class="card-body p-0">
                         <p>{!! $page->description !!}</p>

@@ -15,7 +15,7 @@
                     <!-- Product Main -->
                     <div class="zoompro-wrap">
                         <!-- Product Image -->
-                        <div class="zoompro-span"><img id="zoompro" class="zoompro" src="{{asset('uploads/'.$variant->image)}}" data-zoom-image="{{asset('uploads/'.$variant->image)}}" alt="{{$page->title}}" width="625" height="808" /></div>
+                        <div class="zoompro-span"><img id="zoompro" class="zoompro" src="{{asset('public/uploads/'.$variant->image)}}" data-zoom-image="{{asset('public/uploads/'.$variant->image)}}" alt="{{$page->title}}" width="625" height="808" /></div>
                         <!-- End Product Image -->
                         <!-- Product Label -->
                         <div class="product-labels"><span class="lbl pr-label1">New</span><span class="lbl on-sale">Sale</span></div>
@@ -34,12 +34,12 @@
                     <!-- Product Thumb -->
                     <div class="product-thumb product-horizontal-thumb mt-3">
                         <div id="gallery" class="product-thumb-horizontal">
-                            <a data-image="{{asset('uploads/'.$variant->image)}}" data-zoom-image="{{asset('uploads/'.$variant->image)}}" class="slick-slide slick-cloned active">
-                                <img class="blur-up lazyload" data-src="{{asset('uploads/'.$variant->image)}}" src="{{asset('uploads/'.$variant->image)}}" alt="{{$page->title}}" width="625" height="808" />
+                            <a data-image="{{asset('public/uploads/'.$variant->image)}}" data-zoom-image="{{asset('public/uploads/'.$variant->image)}}" class="slick-slide slick-cloned active">
+                                <img class="blur-up lazyload" data-src="{{asset('public/uploads/'.$variant->image)}}" src="{{asset('public/uploads/'.$variant->image)}}" alt="{{$page->title}}" width="625" height="808" />
                             </a>
                             @foreach($product_image as $pimg)
-                            <a data-image="{{asset('uploads/'.$pimg->other_image)}}" data-zoom-image="{{asset('uploads/'.$pimg->other_image)}}" class="slick-slide slick-cloned active">
-                                <img class="blur-up lazyload" data-src="{{asset('uploads/'.$pimg->other_image)}}" src="{{asset('uploads/'.$pimg->other_image)}}" alt="{{$page->title}}" width="625" height="808" />
+                            <a data-image="{{asset('public/uploads/'.$pimg->other_image)}}" data-zoom-image="{{asset('public/uploads/'.$pimg->other_image)}}" class="slick-slide slick-cloned active">
+                                <img class="blur-up lazyload" data-src="{{asset('public/uploads/'.$pimg->other_image)}}" src="{{asset('public/uploads/'.$pimg->other_image)}}" alt="{{$page->title}}" width="625" height="808" />
                             </a>
                             @endforeach
                         </div>
@@ -49,7 +49,7 @@
                     <!-- Product Gallery -->
                     <div class="lightboximages">
                         @foreach($product_image as $pimg)
-                        <a href="{{asset('uploads/'.$pimg->other_image)}}" data-size="1000x1280"></a>
+                        <a href="{{asset('public/uploads/'.$pimg->other_image)}}" data-size="1000x1280"></a>
                         @endforeach
                     </div>
                     <!-- End Product Gallery -->

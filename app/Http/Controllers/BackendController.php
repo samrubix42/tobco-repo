@@ -79,13 +79,13 @@ class BackendController extends Controller
         if($request->file('image') != '')
         {
         $imageName = time().'.'.$request->image->extension();  
-        $request->image->move(public_path('uploads'), $imageName);
+        $request->image->move(public_path('public/uploads'), $imageName);
 
-        $path           = public_path() . '/uploads/' . $imageName;
+        $path           = public_path() . '/public/uploads/' . $imageName;
         $image_resize   = Image::make($path);
         
         $image_resize->resize(60, 60);
-        $resize         = $image_resize->save(public_path('uploads/thumbnail/' .$imageName));
+        $resize         = $image_resize->save(public_path('public/uploads/thumbnail/' .$imageName));
         }
         
         if($request->input('id') == '')
@@ -171,12 +171,12 @@ class BackendController extends Controller
         if($request->file('image') != '')
         {
         $imageName = time().'.'.$request->image->extension();  
-        $request->image->move(public_path('uploads'), $imageName);
+        $request->image->move(public_path('public/uploads'), $imageName);
 
-        $path           = public_path() . '/uploads/' . $imageName;
+        $path           = public_path() . '/public/uploads/' . $imageName;
         $image_resize   = Image::make($path);
         $image_resize->resize(60, 60);
-        $resize         = $image_resize->save(public_path('uploads/thumbnail/' .$imageName));
+        $resize         = $image_resize->save(public_path('public/uploads/thumbnail/' .$imageName));
         }
         
         if($request->input('id') == '')
@@ -244,7 +244,7 @@ class BackendController extends Controller
                     'id'    => $i->id,
                     'title' => $i->title,
                     'slug'  => $i->slug,
-                    'image' => '<img src="'.url("uploads/thumbnail/".$i->image).'" />',
+                    'image' => '<img src="'.url("public/uploads/thumbnail/".$i->image).'" />',
                     'date'  => date('d F, Y', strtotime($i->created_at)),
                     'action' => '<button class="btn btn-primary  py-8 mb-4 rounded-2 editbtn"><i class="fa fa-edit"></i></button>
                     <a href="'.url("admin/delete/".base64_encode($i->id)."/".base64_encode("category")).'" class="btn btn-danger delete  py-8 mb-4 rounded-2"><i class="fa fa-trash"></i></a>'
@@ -270,12 +270,12 @@ class BackendController extends Controller
         if($request->file('image') != '')
         {
         $imageName = time().'.'.$request->image->extension();  
-        $request->image->move(public_path('uploads'), $imageName);
+        $request->image->move(public_path('public/uploads'), $imageName);
 
-        $path           = public_path() . '/uploads/' . $imageName;
+        $path           = public_path() . '/public/uploads/' . $imageName;
         $image_resize   = Image::make($path);
         $image_resize->resize(80, 80);
-        $resize         = $image_resize->save(public_path('uploads/thumbnail/' .$imageName));
+        $resize         = $image_resize->save(public_path('public/uploads/thumbnail/' .$imageName));
         }
 
         if($request->input('id') == '')
@@ -368,12 +368,12 @@ class BackendController extends Controller
         if($request->file('image') != '')
         {
         $imageName = time().'.'.$request->image->extension();  
-        $request->image->move(public_path('uploads'), $imageName);
+        $request->image->move(public_path('public/uploads'), $imageName);
 
-        $path           = public_path() . '/uploads/' . $imageName;
+        $path           = public_path() . '/public/uploads/' . $imageName;
         $image_resize   = Image::make($path);
         $image_resize->resize(80, 80);
-        $resize         = $image_resize->save(public_path('uploads/thumbnail/' .$imageName));
+        $resize         = $image_resize->save(public_path('public/uploads/thumbnail/' .$imageName));
         }
 
         if($request->input('id') == '')
@@ -535,7 +535,7 @@ class BackendController extends Controller
                 $newData[] = array(
                     'id'    => $i->id,
                     'title' => $i->title,
-                    'image'  => '<img src="'.url("uploads/thumbnail/".$i->banner_image).'" class="img-thumbnail"/>',
+                    'image'  => '<img src="'.url("public/uploads/thumbnail/".$i->banner_image).'" class="img-thumbnail"/>',
                      'subtitle' => $i->subtitle,
                       'price' => $i->price,
                        'url' => $i->url,
@@ -650,11 +650,11 @@ class BackendController extends Controller
         if($request->file('image') != '')
         {
         $imageName = time().'.'.$request->image->extension();  
-        $request->image->move(public_path('uploads'), $imageName);
-        $path           = public_path() . '/uploads/' . $imageName;
+        $request->image->move(public_path('public/uploads'), $imageName);
+        $path           = public_path() . '/public/uploads/' . $imageName;
         $image_resize   = Image::make($path);
         $image_resize->resize(1566, 537);
-        $resize         = $image_resize->save(public_path('uploads/thumbnail/' .$imageName));
+        $resize         = $image_resize->save(public_path('public/uploads/thumbnail/' .$imageName));
         }
         if($request->input('id') == '')
         {
@@ -735,7 +735,7 @@ class BackendController extends Controller
                     'category' => $i->ctitle,
                     'title' => $i->title,
                     'slug'  => $i->slug,
-                    'image' => '<img src="'.url("uploads/thumbnail/".$image).'" />',
+                    'image' => '<img src="'.url("public/uploads/thumbnail/".$image).'" />',
                     'meta'  => 'Meta Title : '.$i->meta_title.'<br>Meta Keyword : '.$i->meta_keyword.'<br>Meta Description : '.$i->meta_description.'',
                     'inventory'  => $inventory,
                     'u_inventory'  => $u_inventory,
@@ -821,13 +821,13 @@ class BackendController extends Controller
                     if (!empty($request->file('product_image')[$i]) && $request->file('product_image')[$i]->isValid()) {
                         $imageFile = $request->file('product_image')[$i];
                         $uniqueName = time() . '_' . uniqid() . '.' . $imageFile->getClientOriginalExtension();
-                        $imageFile->move(public_path('uploads'), $uniqueName);
+                        $imageFile->move(public_path('public/uploads'), $uniqueName);
             
-                        $imagePath = public_path("uploads/{$uniqueName}");
-                        $thumbPath = public_path("uploads/thumbnail/{$uniqueName}");
+                        $imagePath = public_path("public/uploads/{$uniqueName}");
+                        $thumbPath = public_path("public/uploads/thumbnail/{$uniqueName}");
             
-                        if (!file_exists(public_path('uploads/thumbnail'))) {
-                            mkdir(public_path('uploads/thumbnail'), 0755, true);
+                        if (!file_exists(public_path('public/uploads/thumbnail'))) {
+                            mkdir(public_path('public/uploads/thumbnail'), 0755, true);
                         }
             
                         Image::make($imagePath)->resize(118, 118, function ($constraint) {
@@ -851,13 +851,13 @@ class BackendController extends Controller
                         foreach ($additionalImages as $file) {
                             if ($file->isValid()) {
                                 $name = time() . '_' . uniqid() . '_' . preg_replace('/[^A-Za-z0-9.\-_]/', '', $file->getClientOriginalName());
-                                $file->move(public_path('uploads'), $name);
+                                $file->move(public_path('public/uploads'), $name);
             
-                                $originalPath = public_path("uploads/{$name}");
-                                $thumbnailPath = public_path("uploads/thumbnail/{$name}");
+                                $originalPath = public_path("public/uploads/{$name}");
+                                $thumbnailPath = public_path("public/uploads/thumbnail/{$name}");
             
-                                if (!file_exists(public_path('uploads/thumbnail'))) {
-                                    mkdir(public_path('uploads/thumbnail'), 0755, true);
+                                if (!file_exists(public_path('public/uploads/thumbnail'))) {
+                                    mkdir(public_path('public/uploads/thumbnail'), 0755, true);
                                 }
             
                                 Image::make($originalPath)->resize(118, 118, function ($constraint) {
@@ -963,12 +963,12 @@ class BackendController extends Controller
         if($request->file('image') != '')
         {
         $imageName  = time().'.'.$request->image->extension();  
-        $request->image->move(public_path('uploads'), $imageName);
+        $request->image->move(public_path('public/uploads'), $imageName);
 
-        $path           = public_path() . '/uploads/' . $imageName;
+        $path           = public_path() . '/public/uploads/' . $imageName;
         $image_resize   = Image::make($path);
         $image_resize->resize(60, 60);
-        $resize         = $image_resize->save(public_path('uploads/thumbnail/' .$imageName));
+        $resize         = $image_resize->save(public_path('public/uploads/thumbnail/' .$imageName));
         }
         
         if($request->input('id') == '')
@@ -1013,12 +1013,12 @@ class BackendController extends Controller
         if($request->file('logo') != '')
         {
         $imageName = time().'.'.$request->logo->extension();  
-        $request->logo->move(public_path('uploads'), $imageName);
+        $request->logo->move(public_path('public/uploads'), $imageName);
 
-        $path           = public_path() . '/uploads/' . $imageName;
+        $path           = public_path() . '/public/uploads/' . $imageName;
         $image_resize   = Image::make($path);
         $image_resize->resize(100, 48);
-        $resize         = $image_resize->save(public_path('uploads/thumbnail/' .$imageName));
+        $resize         = $image_resize->save(public_path('public/uploads/thumbnail/' .$imageName));
         }
         if($request->input('id') == '')
         {
@@ -1192,12 +1192,12 @@ class BackendController extends Controller
         if($request->file('image') != '')
         {
         $imageName = time().'.'.$request->image->extension();  
-        $request->image->move(public_path('uploads'), $imageName);
+        $request->image->move(public_path('public/uploads'), $imageName);
 
-        $path           = public_path() . '/uploads/' . $imageName;
+        $path           = public_path() . '/public/uploads/' . $imageName;
         $image_resize   = Image::make($path);
         $image_resize->resize(60, 60);
-        $resize         = $image_resize->save(public_path('uploads/thumbnail/' .$imageName));
+        $resize         = $image_resize->save(public_path('public/uploads/thumbnail/' .$imageName));
         }
         
         if($request->input('id') == '')

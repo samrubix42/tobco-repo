@@ -37,7 +37,7 @@
                                     @endphp
                                     @foreach($product as $p)
                                     <tr>
-                                        <td class="text-start"><a href="javascript:void(0)" class="thumb"><img class="rounded-0 blur-up lazyloaded" data-src="{{asset('uploads/'.$p->product_image)}}" src="{{asset('uploads/'.$p->product_image)}}" alt="{{$p->product_title}}" title="product" width="120" height="170"></a></td>
+                                        <td class="text-start"><a href="javascript:void(0)" class="thumb"><img class="rounded-0 blur-up lazyloaded" data-src="{{asset('public/uploads/'.$p->product_image)}}" src="{{asset('public/uploads/'.$p->product_image)}}" alt="{{$p->product_title}}" title="product" width="120" height="170"></a></td>
                                         <td class="text-start proName">
                                             <div class="list-view-item-title">
                                                 <a href="javascript:void(0)">{{$p->product_title}}</a>

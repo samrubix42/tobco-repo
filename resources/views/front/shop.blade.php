@@ -59,10 +59,10 @@
                                             <!-- Start Product Image -->
                                             <a href="{{url('shop/'.$f->slug)}}" class="product-img">
                                                 <!-- Image -->
-                                                <img class="primary blur-up lazyload" data-src="{{asset('uploads/'.$variant->image)}}" src="{{asset('uploads/'.$variant->image)}}" alt="{{$f->title}}" title="{{$f->title}}" width="625" height="759" />
+                                                <img class="primary blur-up lazyload" data-src="{{asset('public/uploads/'.$variant->image)}}" src="{{asset('public/uploads/'.$variant->image)}}" alt="{{$f->title}}" title="{{$f->title}}" width="625" height="759" />
                                                 <!-- End Image -->
                                                 <!-- Hover Image -->
-                                                <img class="hover blur-up lazyload" data-src="{{asset('uploads/'.$product_img->other_image)}}" src="{{asset('uploads/'.$product_img->other_image)}}" alt="{{$f->title}}" title="{{$f->title}}" width="625" height="759" />
+                                                <img class="hover blur-up lazyload" data-src="{{asset('public/uploads/'.$product_img->other_image)}}" src="{{asset('public/uploads/'.$product_img->other_image)}}" alt="{{$f->title}}" title="{{$f->title}}" width="625" height="759" />
                                                 <!-- End Hover Image -->
                                             </a>
                                             <!-- End Product Image -->
@@ -128,7 +128,7 @@
                         @foreach($category as $c)
                         <div class="category-item zoomscal-hov">
                             <a href="{{url('shop/'.$c->slug)}}" class="category-link clr-none">
-                                <div class="zoom-scal zoom-scal-nopb rounded-0"><img class="rounded-0 blur-up lazyload" data-src="{{asset('/uploads/'.$c->image)}}" src="{{asset('/uploads/'.$c->image)}}" alt="{{$c->title}}" title="{{$c->title}}" width="365" height="365" /></div>
+                                <div class="zoom-scal zoom-scal-nopb rounded-0"><img class="rounded-0 blur-up lazyload" data-src="{{asset('/public/uploads/'.$c->image)}}" src="{{asset('/public/uploads/'.$c->image)}}" alt="{{$c->title}}" title="{{$c->title}}" width="365" height="365" /></div>
                                 <div class="details text-center">
                                     <h4 class="category-title mb-0" style="height:35px">{{$c->title}}</h4>
                                     @php

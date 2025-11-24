@@ -136,7 +136,7 @@
                               >Blogs Image</label
                               ><br>
                               @if(!empty($blogs))
-                              <img src="{{url('uploads/thumbnail/'.$blogs->image)}}" class="img-thumbnail"/>
+                              <img src="{{url('public/uploads/thumbnail/'.$blogs->image)}}" class="img-thumbnail"/>
                               @endif
                               <input type="file" class="form-control" name="image" id="image" />
                         </div>

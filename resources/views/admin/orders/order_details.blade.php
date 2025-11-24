@@ -210,7 +210,7 @@
                                 
                               <td class="border-bottom-0">
                                 <div class="d-flex align-items-center gap-3 overflow-hidden">
-                                  <img src="{{url('uploads/'.$o->product_image)}}" alt="{{$o->product_title}}" class="img-fluid rounded" width="80">
+                                  <img src="{{url('public/uploads/'.$o->product_image)}}" alt="{{$o->product_title}}" class="img-fluid rounded" width="80">
                                   <div>
                                     <h6 class="fw-semibold fs-4 mb-0">{{$o->product_title}}</h6>
                                     <p class="mb-0">{{$o->product_variant}}</p>

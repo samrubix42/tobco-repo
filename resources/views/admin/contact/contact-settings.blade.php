@@ -143,7 +143,7 @@
                               >Upload Logo</label
                               ><br>
                               @if($data->logo)
-                              <img src="{{url('uploads/'.$data->logo)}}" style="width:100px" class="img-thumbnail"/>
+                              <img src="{{url('public/uploads/'.$data->logo)}}" style="width:100px" class="img-thumbnail"/>
                               @endif
                            <input
                               type="file"

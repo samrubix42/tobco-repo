@@ -377,7 +377,7 @@ $add = json_decode($address->address_details);
                             alt="Logo"
                             border="0"
                             class="center fixedwidth"
-                            src="{{url('/uploads/1752557842.webp')}}"
+                            src="{{url('/public/uploads/1752557842.webp')}}"
                             style="
                               text-decoration: none;
                               -ms-interpolation-mode: bicubic;
@@ -1177,7 +1177,7 @@ $add = json_decode($address->address_details);
                               mso-line-height-alt: 14px;
                             "
                           >
-                              <img src="{{url('/uploads/'.$p->product_image)}}" alt="{{$p->product_title}}" style="width:100px"/>
+                              <img src="{{url('/public/uploads/'.$p->product_image)}}" alt="{{$p->product_title}}" style="width:100px"/>
                             <p
                               style="
                                 font-size: 14px;

@@ -30,7 +30,7 @@
                             <div class="list list-sidebar-products">
                                 @foreach($recent as $r)
                                 <div class="mini-list-item d-flex align-items-center w-100 clearfix">
-                                    <div class="mini-image"><a class="item-link" href="{{url('blogs/'.$r->slug)}}"><img class="featured-image blur-up lazyload" data-src="{{asset('uploads/'.$r->image)}}" src="{{asset('uploads/'.$r->image)}}" alt="{{$r->title}}" width="100" height="100" /></a></div>
+                                    <div class="mini-image"><a class="item-link" href="{{url('blogs/'.$r->slug)}}"><img class="featured-image blur-up lazyload" data-src="{{asset('public/uploads/'.$r->image)}}" src="{{asset('public/uploads/'.$r->image)}}" alt="{{$r->title}}" width="100" height="100" /></a></div>
                                     <div class="ms-3 details">
                                         <a class="item-title" href="{{url('blogs/'.$r->slug)}}">{{$r->title}}</a>
                                         <div class="item-meta opacity-75"><time datetime="{{date('Y-m-d', strtotime($page->created_at))}}">{{date('F d, Y', strtotime($page->created_at))}}</time></div>
@@ -49,7 +49,7 @@
             <div class="col-12 col-sm-12 col-md-12 col-lg-9 main-col">
                 <div class="blog-article"> 
                     <div class="blog-img mb-3">
-                        <img class="rounded-0 blur-up lazyload" data-src="{{asset('uploads/'.$page->image)}}" src="{{asset('uploads/'.$page->image)}}" alt="{{$page->title}}" width="1200" height="700" />
+                        <img class="rounded-0 blur-up lazyload" data-src="{{asset('public/uploads/'.$page->image)}}" src="{{asset('public/uploads/'.$page->image)}}" alt="{{$page->title}}" width="1200" height="700" />
                     </div>
                     <!-- Blog Content -->
                     <div class="blog-content">

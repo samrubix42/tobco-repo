@@ -235,7 +235,7 @@
                      <!--         >Product Main Image</label-->
                      <!--         ><br>-->
                      <!--         @if(!empty($product))-->
-                     <!--         <img src="{{url('uploads/thumbnail/'.$product->image)}}" class="img-thumbnail"/>-->
+                     <!--         <img src="{{url('public/uploads/thumbnail/'.$product->image)}}" class="img-thumbnail"/>-->
                      <!--         @endif-->
                      <!--         <input type="file" class="form-control" name="image" id="image" />-->
                      <!--   </div>-->
@@ -249,7 +249,7 @@
                      <!--         ><br>-->
                      <!--         @if(!empty($product))-->
                      <!--         @foreach($productImages as $img)-->
-                     <!--         <img src="{{url('uploads/thumbnail/'.$img->other_image)}}" class="img-thumbnail"/>-->
+                     <!--         <img src="{{url('public/uploads/thumbnail/'.$img->other_image)}}" class="img-thumbnail"/>-->
                      <!--         <a href="{{url('admin/delete/'.base64_encode($img->id).'/'.base64_encode('product_images'))}}" class="btn btn-danger delete  py-8 mb-4 rounded-2" style="margin-top: -60px;margin-left: -48px;margin-right: 20px;"><i class="fa fa-times"></i></a>-->
                      <!--         @endforeach-->
                      <!--         @endif-->
@@ -312,7 +312,7 @@
                                         </td>
                                         <td>
                                           @if($v->image)
-                                          <img src="{{asset('uploads/'.$v->image)}}" class="img-thumbnail" width="100"/>
+                                          <img src="{{asset('public/uploads/'.$v->image)}}" class="img-thumbnail" width="100"/>
                                           <br><br>
                                           @endif
                                           <input
@@ -326,7 +326,7 @@
                                           @if(!empty($productImages))
                                           @foreach($productImages as $keys => $img)
                                           @if($img->variant_id === $v->id)
-                                          <img src="{{asset('uploads/'.$img->other_image)}}" class="img-thumbnail" width="100"/>
+                                          <img src="{{asset('public/uploads/'.$img->other_image)}}" class="img-thumbnail" width="100"/>
                                           <a href="{{ url('admin/delete/' . base64_encode($img->id) . '/' . base64_encode('product_images')) }}" class="btn btn-danger delete  py-8 mb-4 rounded-2"><i class="fa fa-trash"></i></a>
                                           <br><br>
                                           @endif

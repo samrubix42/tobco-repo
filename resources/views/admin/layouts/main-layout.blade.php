@@ -36,11 +36,11 @@ $contact = DB::table('contact_settings')->get()->first();
    <body>
       <!-- Preloader -->
       <div class="preloader">
-         <img src="{{url('uploads/'.$contact->logo)}}" alt="loader" class="lds-ripple img-fluid" />
+         <img src="{{url('public/uploads/'.$contact->logo)}}" alt="loader" class="lds-ripple img-fluid" />
       </div>
       <!-- Preloader -->
       <div class="preloader">
-         <img src="{{url('uploads/'.$contact->logo)}}" alt="loader" class="lds-ripple img-fluid" />
+         <img src="{{url('public/uploads/'.$contact->logo)}}" alt="loader" class="lds-ripple img-fluid" />
       </div>
       <!--  Body Wrapper -->
       <div class="page-wrapper" id="main-wrapper" data-theme="blue_theme"  data-layout="vertical" data-sidebartype="full" data-sidebar-position="fixed" data-header-position="fixed">
@@ -50,8 +50,8 @@ $contact = DB::table('contact_settings')->get()->first();
          <div>
             <div class="brand-logo d-flex align-items-center justify-content-between">
                <a href="index.html" class="text-nowrap logo-img">
-               <img src="{{url('uploads/'.$contact->logo)}}" class="dark-logo" width="180" alt="" />
-               <img src="{{url('uploads/'.$contact->logo)}}" class="light-logo"  width="180" alt="" />
+               <img src="{{url('public/uploads/'.$contact->logo)}}" class="dark-logo" width="180" alt="" />
+               <img src="{{url('public/uploads/'.$contact->logo)}}" class="light-logo"  width="180" alt="" />
                </a>
                <div class="close-btn d-lg-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
                   <i class="ti ti-x fs-8 text-muted"></i>

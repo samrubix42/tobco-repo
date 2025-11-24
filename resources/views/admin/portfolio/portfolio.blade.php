@@ -138,7 +138,7 @@ $category = array('Websites', 'UI Design Gallery', 'Logo and Branding', 'App Des
                            <td>{{$p->title}}</td>
                            <td>{{$p->technology}}</td>
                            <td>{{$p->url}}</td>
-                           <td><img src="{{url('public//uploads/thumbnail/'.$p->image)}}" style="width:100px" class="img-thumbnail"/></td>
+                           <td><img src="{{url('public//public/uploads/thumbnail/'.$p->image)}}" style="width:100px" class="img-thumbnail"/></td>
                            <td>{{date('d F, Y', strtotime($p->created_at))}}</td>
                            <td><button class="btn btn-primary  py-8 mb-4 rounded-2" data-bs-toggle="modal" data-bs-target="#bs-example-modal-lg{{$p->id}}"><i class="fa fa-edit"></i></button>
                            <a href="{{url('admin/delete/'.base64_encode($p->id).'/'.base64_encode('portfolio'))}}" class="btn btn-danger delete  py-8 mb-4 rounded-2"><i class="fa fa-trash"></i></a>
@@ -198,7 +198,7 @@ $category = array('Websites', 'UI Design Gallery', 'Logo and Branding', 'App Des
                                                    <div class="col-md-12 mb-3">
                                                       <label for="subheading">Upload Image</label><br>
                                                       @if($p->image)
-                                                      <img src="{{url('uploads/thumbnail/'.$p->image)}}" class="img-thumbnail"/>
+                                                      <img src="{{url('public/uploads/thumbnail/'.$p->image)}}" class="img-thumbnail"/>
                                                       @endif
                                                          <input type="file" class="form-control" id="image"
                                                             placeholder="Image" name="image" />

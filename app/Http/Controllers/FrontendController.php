@@ -831,9 +831,9 @@ class FrontendController extends Controller
         if($request->file('image') != '')
         {
         $imageName = time().'.'.$request->image->extension();  
-        $request->image->move(public_path('uploads'), $imageName);
-        $path           = public_path() . '/uploads/' . $imageName;
-        $image_url = url('uploads/'.$imageName);
+        $request->image->move(public_path('public/uploads'), $imageName);
+        $path           = public_path() . '/public/uploads/' . $imageName;
+        $image_url = url('public/uploads/'.$imageName);
         }
         if($image_url)
         {

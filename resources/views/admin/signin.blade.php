@@ -11,7 +11,7 @@ $contact = DB::table('contact_settings')->get()->first();
                <div class="card mb-0">
                   <div class="card-body">
                      <a href="{{url('/admin/login')}}" class="text-nowrap logo-img text-center d-block mb-5 w-100">
-                     <img src="{{url('uploads/'.$contact->logo)}}" width="180" alt="">
+                     <img src="{{url('public/uploads/'.$contact->logo)}}" width="180" alt="">
                      </a>
                      <div id="message"></div>
                      <form id="login-form" method="POST">
