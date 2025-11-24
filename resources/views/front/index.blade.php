@@ -1,4 +1,20 @@
 @extends('front.layout')
+@section('seo')
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Tobac-Go",
+  "url": "https://www.tobacgo.in/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.tobacgo.in/shop?p={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+@endsection
+
 @section('content')
 @if($page->slug !== 'home')
 <div class="page-header text-center">

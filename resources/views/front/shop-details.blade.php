@@ -1,5 +1,6 @@
 @extends('front.layout')
 @push('meta_tags')
+<title>{{ $page?->meta_title }}</title>
 <meta name="keywords" content="{{ $page?->meta_keyword }}">
 <meta name="description" content="{{ $page?->meta_description }}">
 @endpush
