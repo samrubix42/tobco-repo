@@ -1,0 +1,1 @@
+<p>Your Order Has Been Delivered Successfully on {{$delivery_date}}</p>

@@ -1,0 +1,1 @@
+<p>Your Order Has Been Cancelled due to {{$cancelled_reason}}</p>
