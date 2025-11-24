@@ -240,14 +240,24 @@ class BackendController extends Controller
         $items = $data->orderBy('id', 'desc')->get();
         if(count($items) > 0){
             foreach($items as $i){
+                // include meta fields and page_content as data-attributes on the edit button so the modal can be populated client-side
+                $editBtn = '<button '
+                    . 'class="btn btn-primary py-8 mb-4 rounded-2 editbtn" '
+                    . 'data-id="'.e($i->id).'" '
+                    . 'data-slug="'.e($i->slug).'" '
+                    . 'data-meta_title="'.e($i->meta_title).'" '
+                    . 'data-meta_keyword="'.e($i->meta_keyword).'" '
+                    . 'data-meta_description="'.e($i->meta_description).'" '
+                    . 'data-page_content="'.e($i->page_content).'"'
+                    . '><i class="fa fa-edit"></i></button>';
+
                 $newData[] = array(
                     'id'    => $i->id,
                     'title' => $i->title,
                     'slug'  => $i->slug,
                     'image' => '<img src="'.url("public/uploads/thumbnail/".$i->image).'" />',
                     'date'  => date('d F, Y', strtotime($i->created_at)),
-                    'action' => '<button class="btn btn-primary  py-8 mb-4 rounded-2 editbtn"><i class="fa fa-edit"></i></button>
-                    <a href="'.url("admin/delete/".base64_encode($i->id)."/".base64_encode("category")).'" class="btn btn-danger delete  py-8 mb-4 rounded-2"><i class="fa fa-trash"></i></a>'
+                    'action' => $editBtn . ' <a href="'.url("admin/delete/".base64_encode($i->id)."/".base64_encode("category")).'" class="btn btn-danger delete py-8 mb-4 rounded-2"><i class="fa fa-trash"></i></a>'
                 );
             }
         }else{
@@ -261,11 +271,16 @@ class BackendController extends Controller
         ]);
     }
     public function addCategory(Request $request)
-    {   
+    {
         $data   = $request->all();
+        // Use the slug provided in the request without modification
         $params = array(
             'title'         => $request->input('title'),
-            'slug'          =>  strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $request->input('title')))),
+            'slug'          => $request->input('slug'),
+            'meta_title'    => $request->input('meta_title'),
+            'meta_keyword'  => $request->input('meta_keyword'),
+            'meta_description' => $request->input('meta_description'),
+            'page_content'  => $request->input('page_content'),
         );
         if($request->file('image') != '')
         {
@@ -301,6 +316,18 @@ class BackendController extends Controller
         {
             return response()->json(['status' => 'failed', 'msg' => 'Something Went Wrong.. Please Try Again']);
         }
+    }
+    public function getCategoryById(Request $request)
+    {
+        $id = $request->input('id');
+        if (empty($id)) {
+            return response()->json(['status' => 'failed', 'msg' => 'Missing id']);
+        }
+        $category = CategoryModel::where('id', $id)->first();
+        if (!$category) {
+            return response()->json(['status' => 'failed', 'msg' => 'Category not found']);
+        }
+        return response()->json(['status' => 'success', 'data' => $category]);
     }
     public function subcategory(){
         $page_title = 'Sub Category';

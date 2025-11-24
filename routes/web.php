@@ -40,6 +40,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin/add-pages/{id}', [BackendController::class,'editPages']);
     Route::get('/admin/category', [BackendController::class,'category']);
     Route::get('/admin/get-category', [BackendController::class,'getCategory']);
+    Route::post('/admin/get-category-by-id', [BackendController::class,'getCategoryById']);
     Route::post('/admin/add-category', [BackendController::class,'addCategory']);
     Route::get('/admin/subcategory', [BackendController::class,'subcategory']);
     Route::get('/admin/get-subcategory', [BackendController::class,'getSubCategory']);
