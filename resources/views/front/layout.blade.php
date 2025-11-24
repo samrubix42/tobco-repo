@@ -14,7 +14,7 @@ $cats = request()->segment(2);
         <!-- Title Of Site -->
         <title>{{isset($page->meta_title) ? $page->meta_title : 'Shop'}} | {{config('app.name')}}</title>
         <!-- Favicon -->
-        <link rel="shortcut icon" href="{{asset('/public/public/uploads/'.$contact->logo)}}" />
+        <link rel="shortcut icon" href="{{asset('/public/uploads/'.$contact->logo)}}" />
         <!-- Plugins CSS -->
         <link rel="stylesheet" href="{{asset('public/frontend/')}}/assets/css/plugins.css">
         <!-- Main Style CSS -->
@@ -143,7 +143,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                             <!--Logo-->
                             <div class="logo col-5 col-sm-4 col-md-2 col-lg-2 col-xl-2 align-self-center">
-                                <a class="logoImg" href="{{url('/')}}"><img src="{{asset('/public/public/uploads/'.$contact->logo)}}" alt="{{config('app.name')}}" title="{{config('app.name')}}" width="149" height="39" /></a>
+                                <a class="logoImg" href="{{url('/')}}"><img src="{{asset('/public/uploads/'.$contact->logo)}}" alt="{{config('app.name')}}" title="{{config('app.name')}}" width="149" height="39" /></a>
                             </div>
                             <!--End Logo-->
                             <!--Search Inline-->
