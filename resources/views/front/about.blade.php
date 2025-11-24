@@ -13,6 +13,12 @@
     ul.custom-white-bullets li::marker {
         color: white !important;
     }
+    /* Image container helpers to keep layout tidy */
+    .about-card { overflow: hidden; background: #000; }
+    .about-top { height: 380px; }
+    .about-mid { height: 280px; }
+    .about-bottom { height: 280px; }
+    .about-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
 </style>
 
 <div class="page-content">
@@ -37,18 +43,16 @@
                 <div class="row justify-content-center g-4">
 
                     <div class="col-md-6 col-lg-5">
-                        <div class="card shadow-lg border-0 rounded-4">
-                            <img src="{{ asset('frontend/assets/images/about/top/hookah-shop-in-noida.jpg') }}"
-                                class="card-img-top rounded-4"
-                                style="height:380px; object-fit:cover;">
+                        <div class="card shadow-lg border-0 rounded-4 about-card about-top">
+                            <img src="{{ asset('public/frontend/assets/images/about/top/hookah-shop-in-noida.jpg') }}"
+                                class="" alt="hookah-shop-in-noida.jpg">
                         </div>
                     </div>
 
                     <div class="col-md-6 col-lg-5">
-                        <div class="card shadow-lg border-0 rounded-4">
-                            <img src="{{ asset('frontend/assets/images/about/top/tobac-go-interior.jpeg') }}"
-                                class="card-img-top rounded-4"
-                                style="height:380px; object-fit:cover;">
+                        <div class="card shadow-lg border-0 rounded-4 about-card about-top">
+                            <img src="{{ asset('public/frontend/assets/images/about/top/tobac-go-interior.jpeg') }}"
+                                class="" alt="tobac-go-interior.jpeg">
                         </div>
                     </div>
 
@@ -101,26 +105,23 @@
         <!-- Middle Image Cards -->
         <div class="row g-4 mb-4">
             <div class="col-12 col-md-4">
-                <div class="card border-0 shadow-sm rounded-3 h-100">
-                    <img src="{{ asset('frontend/assets/images/about/middle/premium-hookah.jpg') }}"
-                        class="card-img-top rounded-3"
-                        style="height:280px; object-fit:cover;">
+                <div class="card border-0 shadow-sm rounded-3 h-40 about-card about-mid">
+                    <img src="{{ asset('public/frontend/assets/images/about/middle/premium-hookah.jpg') }}"
+                        alt="premium-hookah.jpg" style="object-fit:contain; background-color:#171717;">
                 </div>
             </div>
 
             <div class="col-12 col-md-4">
-                <div class="card border-0 shadow-sm rounded-3 h-100">
-                    <img src="{{ asset('frontend/assets/images/about/middle/hookah-shop-noida.jpg') }}"
-                        class="card-img-top rounded-3"
-                        style="height:280px; object-fit:cover;">
+                <div class="card border-0 shadow-sm rounded-3 h-40 about-card about-mid">
+                    <img src="{{ asset('public/frontend/assets/images/about/middle/hookah-shop-noida.jpg') }}"
+                        alt="hookah-shop-noida.jpg" style="object-fit:contain; background-color:#171717;">
                 </div>
             </div>
 
             <div class="col-12 col-md-4">
-                <div class="card border-0 shadow-sm rounded-3 h-100">
-                    <img src="{{ asset('frontend/assets/images/about/middle/tobac-go-noida.jpg') }}"
-                        class="card-img-top rounded-3"
-                        style="height:280px; object-fit:cover;">
+                <div class="card border-0 shadow-sm rounded-3 h-40 about-card about-mid">
+                    <img src="{{ asset('public/frontend/assets/images/about/middle/tobac-go-noida.jpg') }}"
+                        alt="tobac-go-noida.jpg" style="object-fit:contain; background-color:#171717;">
                 </div>
             </div>
         </div>
@@ -180,27 +181,21 @@
 
         <!-- Bottom Image Cards -->
         <div class="row g-4 mb-4">
-            <div class="col-12 col-md-4">
-                <div class="card border-0 shadow-sm rounded-3 h-100">
-                    <img src="{{ asset('frontend/assets/images/about/bottom/hookah-store.jpg') }}"
-                        class="card-img-top rounded-3"
-                        style="height:280px; object-fit:cover;">
+                <div class="col-12 col-md-4">
+                <div class="card border-0 shadow-sm rounded-3 h-40 about-card about-bottom">
+                    <img src="{{ asset('public/frontend/assets/images/about/bottom/hookah-store.jpg') }}" alt="hookah-store.jpg" style="object-fit:contain; background:#171717;">
                 </div>
             </div>
 
             <div class="col-12 col-md-4">
-                <div class="card border-0 shadow-sm rounded-3 h-100">
-                    <img src="{{ asset('frontend/assets/images/about/bottom/luxury-hookah-design.jpg') }}"
-                        class="card-img-top rounded-3"
-                        style="height:280px; object-fit:cover;">
+                <div class="card border-0 shadow-sm rounded-3 h-40 about-card about-bottom">
+                    <img src="{{ asset('public/frontend/assets/images/about/bottom/luxury-hookah-design.jpg') }}" alt="luxury-hookah-design.jpg" style="object-fit:contain; background:#171717;">
                 </div>
             </div>
 
             <div class="col-12 col-md-4">
-                <div class="card border-0 shadow-sm rounded-3 h-100">
-                    <img src="{{ asset('frontend/assets/images/about/bottom/premium-hookah-design.jpg') }}"
-                        class="card-img-top rounded-3"
-                        style="height:280px; object-fit:cover;">
+                <div class="card border-0 shadow-sm rounded-3 h-40 about-card about-bottom">
+                    <img src="{{ asset('public/frontend/assets/images/about/bottom/premium-hookah-design.jpg') }}" alt="premium-hookah-design.jpg" style="object-fit:contain; background:#171717;">
                 </div>
             </div>
         </div>
