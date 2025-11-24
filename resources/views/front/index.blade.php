@@ -523,7 +523,7 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="contact-wrapper p-r z-1 mb-50" data-aos="fade-right" data-aos-delay="10" data-aos-duration="1000">
-                    <div class="shape shape-one"><span><img src="{{url('public/frontend/')}}/images/shape/cl-line.png" alt="Line Shape"></span></div>
+                    <div class="shape shape-one"><span></span></div>
                     <h3>Get in touch</h3>
                     <div id="message"></div>
                     <form class="pesco-contact-form" id="contact-form">
