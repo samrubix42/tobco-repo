@@ -83,6 +83,7 @@ Route::get('/clear-cache/{key}', function ($key) {
     if ($key != '322') {
         return "Invalid Key!";
     }
+    Artisan::call('storage:link');
     Artisan::call('view:clear');
     Artisan::call('cache:clear');
     Artisan::call('config:clear');

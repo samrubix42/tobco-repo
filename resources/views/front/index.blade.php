@@ -31,7 +31,7 @@
                 <div class="collection-item">
                     <a href="{{url('shop/'.$c->slug)}}" class="zoom-scal">
                         <div class="img">
-                            <img class="blur-up lazyload w-100" data-src="{{asset('uploads/'.$c->image)}}" src="{{asset('uploads/'.$c->image)}}" alt="{{$c->title}}" title="" width="480" height="617" />
+                            <img class="blur-up lazyload w-100" data-src="{{asset('/public/uploads/'.$c->image)}}" src="{{asset('/public/uploads/'.$c->image)}}" alt="{{$c->title}}" title="" width="480" height="617" />
                         </div>
                         <div class="details middle-center p-lg-0">
                             <div class="inner">
@@ -68,10 +68,10 @@
                             <!-- Start Product Image -->
                             <a href="{{url('shop/'.$f->slug)}}" class="product-img">
                                 <!-- Image -->
-                                <img class="primary blur-up lazyload" data-src="{{asset('uploads/'.$variant->image)}}" src="{{asset('uploads/'.$f->image)}}" alt="{{$f->title}}" title="{{$f->title}}" width="625" height="759" />
+                                <img class="primary blur-up lazyload" data-src="{{asset('/public/uploads/'.$variant->image)}}" src="{{asset('/public/uploads/'.$f->image)}}" alt="{{$f->title}}" title="{{$f->title}}" width="625" height="759" />
                                 <!-- End Image -->
                                 <!-- Hover Image -->
-                                <img class="hover blur-up lazyload" data-src="{{asset('uploads/'.$product_img->other_image)}}" src="{{asset('uploads/'.$product_img->other_image)}}" alt="{{$f->title}}" title="{{$f->title}}" width="625" height="759" />
+                                <img class="hover blur-up lazyload" data-src="{{asset('/public/uploads/'.$product_img->other_image)}}" src="{{asset('/public/uploads/'.$product_img->other_image)}}" alt="{{$f->title}}" title="{{$f->title}}" width="625" height="759" />
                                 <!-- End Hover Image -->
                             </a>
                             <!-- End Product Image -->
@@ -143,7 +143,7 @@
                         <div class="collection-item sp-col">
                             <a href="{{url('shop/'.$c->slug)}}" class="zoom-scal clr-none">
                                 <div class="img">
-                                    <img class="blur-up lazyload w-100" data-src="{{asset('uploads/'.$c->image)}}" src="{{asset('uploads/'.$c->image)}}" alt="{{$c->title}}" title="{{$c->title}}" width="306" height="307" />
+                                    <img class="blur-up lazyload w-100" data-src="{{asset('/public/uploads/'.$c->image)}}" src="{{asset('/public/uploads/'.$c->image)}}" alt="{{$c->title}}" title="{{$c->title}}" width="306" height="307" />
                                 </div>
                                 <div class="details middle-center p-lg-0">
                                     <div class="inner">
@@ -203,10 +203,10 @@
                                         <!-- Start Product Image -->
                                         <a href="{{url('shop/'.$p->slug)}}" class="product-img">
                                             <!-- Image -->
-                                            <img class="primary blur-up lazyload" data-src="{{asset('uploads/'.$variant->image)}}" src="{{asset('uploads/'.$variant->image)}}" alt="{{$p->title}}" title="{{$p->title}}" width="625" height="759" />
+                                            <img class="primary blur-up lazyload" data-src="{{asset('/public/uploads/'.$variant->image)}}" src="{{asset('/public/uploads/'.$variant->image)}}" alt="{{$p->title}}" title="{{$p->title}}" width="625" height="759" />
                                             <!-- End Image -->
                                             <!-- Hover Image -->
-                                            <img class="hover blur-up lazyload" data-src="{{asset('uploads/'.$product_img->other_image)}}" src="{{asset('uploads/'.$product_img->other_image)}}" alt="{{$p->title}}" title="{{$p->title}}" width="625" height="759" />
+                                            <img class="hover blur-up lazyload" data-src="{{asset('/public/uploads/'.$product_img->other_image)}}" src="{{asset('/public/uploads/'.$product_img->other_image)}}" alt="{{$p->title}}" title="{{$p->title}}" width="625" height="759" />
                                             <!-- End Hover Image -->
                                         </a>
                                         <!-- End Product Image -->
@@ -377,7 +377,7 @@
         @foreach($category as $c)
         <div class="category-item col-item zoomscal-hov">
             <a href="{{url('shop/'.$c->slug)}}" class="category-link clr-none">
-                <div class="zoom-scal zoom-scal-nopb"><img class="blur-up lazyload w-100" data-src="{{asset('/uploads/'.$c->image)}}" src="{{asset('/uploads/'.$c->image)}}" alt="{{$c->title}}" title="{{$c->title}}" width="365" height="365" /></div>
+                <div class="zoom-scal zoom-scal-nopb"><img class="blur-up lazyload w-100" data-src="{{asset('//public/uploads/'.$c->image)}}" src="{{asset('//public/uploads/'.$c->image)}}" alt="{{$c->title}}" title="{{$c->title}}" width="365" height="365" /></div>
                 <div class="details mt-3 d-flex justify-content-between align-items-center">
                     <h4 class="category-title mb-0">{{$c->title}}</h4>
                     @php
@@ -417,7 +417,7 @@
                                 <div class="author-quote-item d-flex justify-content-between align-items-center">
                                     <div class="author-item">
                                         <div class="author-thumb">
-                                            <img src="{{asset('uploads/'.$t->image)}}" alt="{{$t->title}}">
+                                            <img src="{{asset('/public/uploads/'.$t->image)}}" alt="{{$t->title}}">
                                         </div>
                                         <div class="author-info">
                                             <h5>{{$t->title}}</h5>
@@ -454,7 +454,7 @@
             <div class="blog-item col-item">
                 <div class="blog-article zoomscal-hov">
                     <div class="blog-img">
-                        <a class="featured-image rounded-0 zoom-scal" href="{{url('/blogs/'.$b->slug)}}"><img class="rounded-0 blur-up lazyload" data-src="{{asset('uploads/'.$b->image)}}" src="{{asset('uploads/'.$b->image)}}" alt="{{$b->title}}" width="740" height="410" /></a>
+                        <a class="featured-image rounded-0 zoom-scal" href="{{url('/blogs/'.$b->slug)}}"><img class="rounded-0 blur-up lazyload" data-src="{{asset('/public/uploads/'.$b->image)}}" src="{{asset('/public/uploads/'.$b->image)}}" alt="{{$b->title}}" width="740" height="410" /></a>
                     </div>
                     <div class="blog-content">
                         <h2 class="h3"><a href="{{url('/blogs/'.$b->slug)}}">{{$b->title}}</a></h2>
@@ -999,7 +999,7 @@
                                 @endphp
                                 @foreach($product as $p)
                                 <tr>
-                                    <td class="text-start"><a href="javascript:void(0)" class="thumb"><img class="rounded-0 blur-up lazyloaded" data-src="{{asset('uploads/'.$p->product_image)}}" src="{{asset('uploads/'.$p->product_image)}}" alt="{{$p->product_title}}" title="product" width="120" height="170"></a></td>
+                                    <td class="text-start"><a href="javascript:void(0)" class="thumb"><img class="rounded-0 blur-up lazyloaded" data-src="{{asset('/public/uploads/'.$p->product_image)}}" src="{{asset('/public/uploads/'.$p->product_image)}}" alt="{{$p->product_title}}" title="product" width="120" height="170"></a></td>
                                     <td class="text-start proName">
                                         <div class="list-view-item-title">
                                             <a href="javascript:void(0)">{{$p->product_title}}</a>
@@ -1480,7 +1480,7 @@ $savedAddress = App\Models\SavedAddressModel::where('user_id', Auth::guard('cust
                                     @endphp
 
                                     <tr>
-                                        <td><img class="blur-up lazyload" data-src="{{asset('uploads/'.$product[0]->product_image)}}" src="{{asset('uploads/'.$product[0]->product_image)}}" width="50" alt="{{$product[0]->product_title}}" title="product"></td>
+                                        <td><img class="blur-up lazyload" data-src="{{asset('/public/uploads/'.$product[0]->product_image)}}" src="{{asset('/public/uploads/'.$product[0]->product_image)}}" width="50" alt="{{$product[0]->product_title}}" title="product"></td>
                                         <td><span class="id">#{{$o->order_id}}</span></td>
                                         <td><span class="price fw-500">₹{{$o->paid_amount}}</span></td>
                                         <td>
