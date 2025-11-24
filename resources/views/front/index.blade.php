@@ -377,7 +377,7 @@
         @foreach($category as $c)
         <div class="category-item col-item zoomscal-hov">
             <a href="{{url('shop/'.$c->slug)}}" class="category-link clr-none">
-                <div class="zoom-scal zoom-scal-nopb"><img class="blur-up lazyload w-100" data-src="{{asset('//public/uploads/'.$c->image)}}" src="{{asset('//public/uploads/'.$c->image)}}" alt="{{$c->title}}" title="{{$c->title}}" width="365" height="365" /></div>
+                <div class="zoom-scal zoom-scal-nopb"><img class="blur-up lazyload w-100" data-src="{{asset('/public/uploads/'.$c->image)}}" src="{{asset('/public/uploads/'.$c->image)}}" alt="{{$c->title}}" title="{{$c->title}}" width="365" height="365" /></div>
                 <div class="details mt-3 d-flex justify-content-between align-items-center">
                     <h4 class="category-title mb-0">{{$c->title}}</h4>
                     @php

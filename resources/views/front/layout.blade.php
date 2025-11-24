@@ -14,7 +14,7 @@ $cats = request()->segment(2);
         <!-- Title Of Site -->
         <title>{{isset($page->meta_title) ? $page->meta_title : 'Shop'}} | {{config('app.name')}}</title>
         <!-- Favicon -->
-        <link rel="shortcut icon" href="{{asset('/public/uploads/'.$contact->logo)}}" />
+        <link rel="shortcut icon" href="{{asset('/public/'.$contact->logo)}}" />
         <!-- Plugins CSS -->
         <link rel="stylesheet" href="{{asset('public/frontend/')}}/assets/css/plugins.css">
         <!-- Main Style CSS -->
@@ -143,7 +143,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                             <!--Logo-->
                             <div class="logo col-5 col-sm-4 col-md-2 col-lg-2 col-xl-2 align-self-center">
-                                <a class="logoImg" href="{{url('/')}}"><img src="{{asset('/public/uploads/'.$contact->logo)}}" alt="{{config('app.name')}}" title="{{config('app.name')}}" width="149" height="39" /></a>
+                                <a class="logoImg" href="{{url('/')}}"><img src="{{asset('/public/'.$contact->logo)}}" alt="{{config('app.name')}}" title="{{config('app.name')}}" width="149" height="39" /></a>
                             </div>
                             <!--End Logo-->
                             <!--Search Inline-->
@@ -469,7 +469,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="row align-items-center">
                             <div class="col-12 col-sm-12 col-md-2 col-lg-3">
                                 <div class="ftr-logo text-md-start">
-                                    <img class="logoImg" src="{{asset('public/public/uploads/'.$contact->logo)}}" alt="{{config('app.name')}}" title="{{config('app.name')}}" width="149" height="39" />
+                                    <img class="logoImg" src="{{asset('public/'.$contact->logo)}}" alt="{{config('app.name')}}" title="{{config('app.name')}}" width="149" height="39" />
                                 </div>
                             </div>
                             <div class="col-12 col-sm-12 col-md-6 col-lg-6 my-3 my-md-0 d-none">
@@ -733,7 +733,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                  listItems = cartData?.map(function(cartProducts, index) {
                  return `<li class="item d-flex justify-content-center align-items-center">
                             <a class="product-image" href="#">
-                                <img class="blur-up lazyload" data-src="{{asset('public/public/uploads/')}}/`+cartProducts.product_image+`" src="{{asset('public/public/uploads/')}}/`+cartProducts.product_image+`" alt="`+ cartProducts.product_title +`" title="Product" width="120" height="170" />
+                                <img class="blur-up lazyload" data-src="{{asset('public/')}}/`+cartProducts.product_image+`" src="{{asset('public/')}}/`+cartProducts.product_image+`" alt="`+ cartProducts.product_title +`" title="Product" width="120" height="170" />
                             </a>
                             <div class="product-details">
                                 <a class="product-title" href="#">`+ cartProducts.product_title +`</a>
@@ -784,7 +784,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
              var listItems = cartData?.map(function(cartProducts, index) {
                 return `<tr class="cart-row cart-flex position-relative">
                             <td class="cart-image cart-flex-item">
-                                <a href="#"><img class="cart-image rounded-0 blur-up lazyload" data-src="public/public/uploads/${cartProducts.product_image}" src="public/public/uploads/${cartProducts.product_image}" alt="${cartProducts.product_title}" width="120" height="170" /></a>
+                                <a href="#"><img class="cart-image rounded-0 blur-up lazyload" data-src="public/${cartProducts.product_image}" src="public/${cartProducts.product_image}" alt="${cartProducts.product_title}" width="120" height="170" /></a>
                             </td>
                             <td class="cart-meta small-text-left cart-flex-item">
                                 <div class="list-view-item-title">
@@ -833,7 +833,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                  return `<tr class="cart-row cart-flex position-relative">
                             <td class="cart-delete text-center small-hide"><a href="javascript:void(0)" class="cart-remove cartRemoves cart-remove remove-icon position-static" data-bs-toggle="tooltip" data-bs-placement="top" title="Remove to Cart"><i class="icon anm anm-times-r"></i></a></td>
                             <td class="cart-image cart-flex-item">
-                                <a href="#"><img class="cart-image rounded-0 blur-up lazyload" data-src="public/public/uploads/${cartProducts.product_image}" src="public/public/uploads/${cartProducts.product_image}" alt="${cartProducts.product_title}" width="120" height="170" /></a>
+                                <a href="#"><img class="cart-image rounded-0 blur-up lazyload" data-src="public/${cartProducts.product_image}" src="public/${cartProducts.product_image}" alt="${cartProducts.product_title}" width="120" height="170" /></a>
                             </td>
                             <td class="cart-meta small-text-left cart-flex-item">
                                 <div class="list-view-item-title">
