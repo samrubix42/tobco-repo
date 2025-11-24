@@ -3,6 +3,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BackendController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FrontendController;
+use Illuminate\Support\Facades\Artisan;
 
 /*
 |--------------------------------------------------------------------------
@@ -77,6 +78,19 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin/orders/{id}', [BackendController::class,'order']);
     Route::post('/admin/update-order-status', [BackendController::class,'saveOrderStatus']);
 });
+
+Route::get('/clear-cache/{key}', function ($key) {
+    if ($key != '322') {
+        return "Invalid Key!";
+    }
+    Artisan::call('view:clear');
+    Artisan::call('cache:clear');
+    Artisan::call('config:clear');
+    Artisan::call('optimize:clear');
+
+    return "All cache cleared!";
+});
+
 
 Route::get('/logout', [FrontendController::class,'logout']);
 Route::get('/delete-address/{id}', [FrontendController::class,'deleteAddress']);
